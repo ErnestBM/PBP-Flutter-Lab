@@ -1,4 +1,5 @@
 import 'package:beemapp/main.dart';
+import 'package:beemapp/page/to_do_page.dart';
 import 'package:flutter/material.dart';
 class MyFormPage extends StatefulWidget {
     const MyFormPage({super.key});
@@ -46,6 +47,16 @@ class _MyFormPageState extends State<MyFormPage> {
                 Navigator.pushReplacement(
                   context,
                   MaterialPageRoute(builder: (context) => const MyFormPage()),
+                );
+              },
+            ),
+            ListTile(
+              title: const Text('Form'),
+              onTap: () {
+                // Route menu ke halaman form
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(builder: (context) => const ToDoPage()),
                 );
               },
             ),
@@ -310,3 +321,5 @@ class _MyFormPageState extends State<MyFormPage> {
     );
   }
 }
+
+

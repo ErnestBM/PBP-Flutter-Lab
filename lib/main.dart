@@ -1,5 +1,6 @@
+import 'package:beemapp/page/to_do_page.dart';
 import 'package:flutter/material.dart';
-import 'package:beemapp/form.dart';
+import 'package:beemapp/page/form.dart';
 
 void main() {
   runApp(const MyApp());
@@ -72,6 +73,16 @@ class _MyHomePageState extends State<MyHomePage> {
                 );
               },
             ),
+            ListTile(
+              title: const Text('ToDo'),
+              onTap: () {
+                // Route menu ke halaman form
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(builder: (context) => const ToDoPage()),
+                );
+              },
+            ),
           ],
         ),
       ),
@@ -97,3 +108,4 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
+
